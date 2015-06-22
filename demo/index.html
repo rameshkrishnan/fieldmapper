@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Field Mapper</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	
+	<link rel="stylesheet" href="../dist/fieldmapper.css">
+	<script src="../dist/fieldmapper.js"></script>
+	
+	<style>
+		.wrapper {
+			margin:50px auto;
+			width:500px;
+			text-align:center;
+		}
+		li {
+			text-align:left;
+		}
+		table {
+			width:500px;
+		}
+		th, td {
+			border:1px solid #999;
+		}
+		th {
+			background-color:#c9c9c9;
+		}
+		
+	</style>
+</head>
+<body ng-controller="DemoController">
+<div class="wrapper">
+	<h1>FIELD MAPPER</h1>
+	<div field-mapper source="sourceColumns" destination="destinationColumns" mapping="mappedColumns"></div>
+	<p>HOW TO USE:</p>
+	<ol>
+		<li>Click the source column (Clicked column will be highlighted)</li>
+		<li>Click the destination column (You can see the line shows the linkage)</li>
+		<li>Double click the connected line to remove the linkage</li>
+	</ol>
+	<button ng-click="">Get the Mapping</button>
+	<table>
+	<tr>
+		<th>SOURCE</th>
+		<th>DESTINATION</th>
+	</tr>
+	<tr ng-repeat="column in mappedColumns">
+		<td>{{column.source}}</td>
+		<td>{{column.destination}}</td>
+	</tr>
+	</table>
+</div>
+    
+<script>
+	var app = angular.module('demo', ['fieldmapper']);
+	app.controller('DemoController', function($scope){
+		$scope.sourceColumns = [
+			{columnName: 'EmployeeID'},
+			{columnName: 'EmployeeName'},
+			{columnName: 'EmployeeAddess'},
+			{columnName: 'Department'},
+			{columnName: 'WorkLocation'},
+			{columnName: 'Phone'},
+			{columnName: 'Email'}
+		];
+		
+		$scope.destinationColumns = [
+			{columnName: 'Email'},
+			{columnName: 'Mobile'},
+			{columnName: 'Location'},
+			{columnName: 'Department'},
+			{columnName: 'EmpAddess'},
+			{columnName: 'EmpName'},
+			{columnName: 'EmpID'}
+		];
+		
+		$scope.mappedColumns = [];
+		
+		$scope.getMapping = function() {
+			console.log('digest cycle should happen to get the mapping');
+		};
+	});
+</script>
+</body>
+</html>
