@@ -1,0 +1,20 @@
+{
+  "name": "fieldmapper",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rameshkrishnan/fieldmapper",
+  "authors": [
+    "rameshkrishnan"
+  ],
+  "description": "AngularJs Directive for field mapping. Two list of items shown to get the mapping connect in the UI. (ex) two database's table columns to be listed and get the mapping connects.",
+  "main": "/dist/fieldmapper.js",
+  "keywords": [
+    "fieldmapper",
+    "directive",
+    "angularjs",
+    "svg",
+    "database",
+    "column",
+    "mapping"
+  ],
+  "license": "MIT"
+}
