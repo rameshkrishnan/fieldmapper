@@ -1,0 +1,31 @@
+{
+  "name": "fieldmapper",
+  "version": "1.1.0",
+  "description": "AngularJs Directive for field mapping. Two list of items shown to get the mapping connect in the UI. (ex) two database's table columns to be listed and get the mapping connects.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "node webserver.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rameshkrishnan/fieldmapper.git"
+  },
+  "author": "Rameshkrishnan Subramanian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rameshkrishnan/fieldmapper/issues"
+  },
+  "homepage": "https://github.com/rameshkrishnan/fieldmapper#readme",
+  "devDependencies": {
+    "connect": "^3.4.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1",
+    "serve-static": "^1.10.2"
+  }
+}

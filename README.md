@@ -8,7 +8,10 @@ It's AngularJS's directive for field mapping. It can be used for any two list ma
 
 ## How to Use
 
-- `Refer demo/index.html source`
+- `bower install fieldmapper`
+- `<link rel="stylesheet" href="bower_components/fieldmapper/dist/styles.css">
+   <script src="bower_components/fieldmapper/dist/index.js"></script>` - include these tags in your index.html file.
+- `<div field-mapper source="sourceColumns" destination="destinationColumns" mapping="mappedColumns"></div>` - use this tag for fieldMapper component. For more info, refer demo/index.html
 
 ## Sample Screen-shots
 
@@ -18,5 +21,10 @@ It's AngularJS's directive for field mapping. It can be used for any two list ma
 #### Fields Connected
 ![Fields Connected](demo/fieldmapper.png)
 
+## Development
+
+- `npm install`
+- `npm run build` - to build the files to dist folder
+- `npm run start` - to see the demo of the component.
 
 MIT License

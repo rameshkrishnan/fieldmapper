@@ -1,5 +1,5 @@
 // Usage
-// <div at-field-mapper source="sourceColumns" destination="destinationColumns" mapping="mappingIO"></div>
+// <div field-mapper source="sourceColumns" destination="destinationColumns" mapping="mappingIO"></div>
 
 (function () {
     'use strict';
